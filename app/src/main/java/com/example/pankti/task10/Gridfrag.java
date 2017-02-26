@@ -125,7 +125,6 @@ public class Gridfrag extends Fragment{
                 Toast.makeText(getActivity(), "Requires Internet Connection", Toast.LENGTH_SHORT).show();
             }
 
-
             GridViewAdapter customAdapterGrid = new GridViewAdapter(getActivity(),Gpost,val);
 
             gridView.setAdapter(customAdapterGrid);
