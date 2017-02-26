@@ -1,11 +1,12 @@
 package com.example.pankti.task10;
 
 import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ public class GridViewAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
     int[] val;
-    Quotefrag quotefrag;
+
 
     GridViewAdapter(Context context,ArrayList<GridPost> gridPosts,int[] val){
 
@@ -89,20 +90,22 @@ public class GridViewAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
 
-                quotefrag = new Quotefrag();
+                Quotefrag quotefrag  = new Quotefrag();
 
                 Bundle bundleGrid = new Bundle();
                 bundleGrid.putInt("QuotesList",gridPosts.get(i).getId());
                 quotefrag.setArguments(bundleGrid);
 
 
-                Activity activityGrid = (Activity) context;
+                MainActivity activityGrid = (MainActivity) context;
 
-                FragmentManager fmi = activityGrid.getFragmentManager();
+               FragmentManager fmi = activityGrid.getSupportFragmentManager();
                 FragmentTransaction fti = fmi.beginTransaction();
                 fti.replace(R.id.linear,quotefrag);
                 fti.addToBackStack("");
                 fti.commit();
+
+
 
             }
         });

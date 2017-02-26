@@ -1,7 +1,6 @@
 package com.example.pankti.task10;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,15 +12,12 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -34,10 +30,10 @@ public class Gridfrag extends Fragment{
     GridView gridView;
     Quotefrag listViewfragment = new Quotefrag();
 
-    int[] val = new int[]{R.drawable.moti,R.drawable.valti,
+    int[] val = new int[]{R.drawable.life, R.drawable.valti,
             R.drawable.love,R.drawable.fship,
-            R.drawable.life,R.drawable.images,
-            R.drawable.positive};
+            R.drawable.positive,R.drawable.images,
+            R.drawable.moti};
 
     @Nullable
     @Override

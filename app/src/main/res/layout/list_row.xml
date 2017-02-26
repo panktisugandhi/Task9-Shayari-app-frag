@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_list_view"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="25dp"
         android:maxLines="1"
         android:ellipsize="marquee"

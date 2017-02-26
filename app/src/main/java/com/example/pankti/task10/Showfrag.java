@@ -26,9 +26,10 @@ public class Showfrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
       View view = inflater.inflate(R.layout.activity_show, container, false);
         id = getArguments().getString("Quote");
-       TextView t1 = (TextView)view.findViewById(R.id.TV_6);
+       TextView t1 = (TextView)view.findViewById(R.id.quote);
         id = getArguments().getString("Quote");
         t1.setText(id);
+
 
         share = (Button)view.findViewById(R.id.btn_share);
         share.setOnClickListener(new View.OnClickListener() {

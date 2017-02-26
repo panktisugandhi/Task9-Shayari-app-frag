@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,7 +90,7 @@ public class ListViewAdapter extends BaseAdapter {
             public void onClick(View view) {
 
 
-                Activity activityList = (Activity) contextList;
+                MainActivity activityList = (MainActivity) contextList;
 
                 showfrag = new Showfrag();
 
@@ -98,7 +98,7 @@ public class ListViewAdapter extends BaseAdapter {
                 bundleList.putString("Quote",listPosts.get(position).getQuotes());
                 showfrag.setArguments(bundleList);
 
-                FragmentManager fmq = activityList.getFragmentManager();
+                FragmentManager fmq = activityList.getSupportFragmentManager();
                 FragmentTransaction ftq = fmq.beginTransaction();
                 ftq.replace(R.id.linear,showfrag);
                 ftq.addToBackStack("");

@@ -5,21 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/download"
+
     tools:context="com.example.pankti.task10.MainActivity">
 
-
-    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    <GridView
+        android:id="@+id/fragment_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="auto_fit"
         android:columnWidth="90dp"
-        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:paddingTop="20dp"
         android:verticalSpacing="10dp"
-        android:gravity="center"
+        android:horizontalSpacing="10dp"
         android:stretchMode="columnWidth"
-        android:id="@+id/fragment_grid"
-        >
+        android:background="@android:color/darker_gray"
+        android:layoutAnimation="@anim/anim"
+        android:gravity="center" />
 
-    </GridView>
+
 </LinearLayout>
